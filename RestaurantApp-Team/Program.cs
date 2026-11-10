@@ -11,6 +11,8 @@ namespace RestaurantApp_Team
         public string Name { get; set; }
         public string Type { get; set; }
         public double Rating { get; set; }
+
+     
     }
 
     internal class Program
@@ -19,7 +21,10 @@ namespace RestaurantApp_Team
     {
         new Restaurant { Name = "KFC", Type = "Fast Food", Rating = 4.2 },
         new Restaurant { Name = "MK", Type = "Suki", Rating = 4.7 },
-        new Restaurant { Name = "Fuji", Type = "Japanese", Rating = 4.8 }
+        new Restaurant { Name = "PIZZA HUT", Type = "Fast Food", Rating = 4.8 },
+        new Restaurant { Name = "TEE NOI", Type = "Suki", Rating = 4.9 },
+        new Restaurant { Name = "MC", Type = "Fast Food", Rating = 4.5 },
+        new Restaurant { Name = "STARBUCKS", Type = "Coffeehouse", Rating = 4.6},
     };
 
         static void Main(string[] args)
@@ -59,6 +64,7 @@ namespace RestaurantApp_Team
         static void AddRestaurant()
         {
             Console.WriteLine("Not completed");
+
         }
 
         // คน B รับผิดชอบ
@@ -70,6 +76,7 @@ namespace RestaurantApp_Team
         // คน C รับผิดชอบ
         static void ShowSummary()
         {
+
             
             double total = 0;
             double highest = double.MinValue;
@@ -95,7 +102,7 @@ namespace RestaurantApp_Team
             Console.WriteLine("คะแนนเฉลี่ย: " + average.ToString("F2"));
             Console.WriteLine("คะแนนสูงสุด: " + highest);
             Console.WriteLine("คะแนนต่ำสุด: " + nouy);
+
         }
-    }
 
 }
