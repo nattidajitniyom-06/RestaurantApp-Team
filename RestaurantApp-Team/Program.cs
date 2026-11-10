@@ -11,6 +11,8 @@ namespace RestaurantApp_Team
         public string Name { get; set; }
         public string Type { get; set; }
         public double Rating { get; set; }
+
+     
     }
 
     internal class Program
@@ -19,7 +21,10 @@ namespace RestaurantApp_Team
     {
         new Restaurant { Name = "KFC", Type = "Fast Food", Rating = 4.2 },
         new Restaurant { Name = "MK", Type = "Suki", Rating = 4.7 },
-        new Restaurant { Name = "Fuji", Type = "Japanese", Rating = 4.8 }
+        new Restaurant { Name = "PIZZA HUT", Type = "Fast Food", Rating = 4.8 },
+        new Restaurant { Name = "TEE NOI", Type = "Suki", Rating = 4.9 },
+        new Restaurant { Name = "MC", Type = "Fast Food", Rating = 4.5 },
+        new Restaurant { Name = "STARBUCKS", Type = "Coffeehouse", Rating = 4.6},
     };
 
         static void Main(string[] args)
@@ -58,7 +63,20 @@ namespace RestaurantApp_Team
         // คน A รับผิดชอบ
         static void AddRestaurant()
         {
-            Console.WriteLine("Not completed");
+            double Rating;
+
+            Console.WriteLine("กรอกชื่อร้านอาหาร");
+            string Name = Console.ReadLine();
+
+            Console.WriteLine("กรอกประเภทอาหาร");
+            string Type = Console.ReadLine();
+
+            Console.WriteLine("คะแนนร้านอาหาร");
+            Rating = double.Parse( Console.ReadLine());
+
+            restaurants.Add(new Restaurant { Type = Type, Rating = Rating });
+  
+
         }
 
         // คน B รับผิดชอบ
