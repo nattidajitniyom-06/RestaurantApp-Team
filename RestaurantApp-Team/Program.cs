@@ -82,13 +82,13 @@ namespace RestaurantApp_Team
         // คน B รับผิดชอบ
         static void ShowGoodRating()
         {
-            Console.WriteLine("Not completed");
+            Console.WriteLine("completed");
 
             foreach (Restaurant r in restaurants)
             {
                 if (r.Rating >= 4.5)
                 {
-                    Console.WriteLine("ชื่อร้าน : "+r.Name+" คะแนน : "+ r.Rating);
+                    Console.WriteLine("ชื่อร้าน : " + r.Name + " คะแนน : " + r.Rating);
                 }
             }
         }
@@ -98,32 +98,6 @@ namespace RestaurantApp_Team
         {
             Console.WriteLine("Not completed");
 
-          
-                double total = 0;
-                double highest = double.MinValue;
-                double nouy = double.MaxValue;
-            foreach (Restaurant r in restaurants)
-            {
-                total += r.Rating;
-                if (r.Rating > highest)
-                {
-                    highest = r.Rating;
-                }
-            }
-            foreach (Restaurant r in restaurants)
-            {
-                if (r.Rating < nouy)
-
-                {
-                    nouy = r.Rating;
-                }
-            }
-                double average = total / restaurants.Count;
-                Console.WriteLine("จำนวนร้าน: " + restaurants.Count);
-                Console.WriteLine("คะแนนเฉลี่ย: " + average.ToString("F2"));
-                Console.WriteLine("คะแนนสูงสุด: " + highest);
-                Console.WriteLine("คะแนนต่ำสุด: " + nouy);
-              
 
             }
         }
